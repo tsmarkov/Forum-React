@@ -61,6 +61,15 @@ class User extends Component {
     })
   }
 
+  deleteProfile = (uid) => {
+    auth.deleteUser(uid)
+      .then(() => {
+        this.setState({
+          redirect: true
+        })
+      })
+  }
+
   render = () => {
     return (
       <div>
@@ -102,10 +111,21 @@ class User extends Component {
                       <div className="col-md-4"></div>
                     </div>
                     <div className="row">
-                      <div className="col-md-4"></div>
+                      <div className="col-md-4">
+                        {sessionStorage.getItem('admin') ?
+                          <button className="btn btn-danger"
+                            onClick={() => this.deleteProfile(this.state.user.uid)}>
+                            Delete profile
+                          </button>
+                          : <div></div>
+                        }
+                      </div>
                       <div className="col-md-4 text-center">
                         {this.state.user.admin ?
-                          <span className="badge-info">Admin</span>
+                          <div>
+                            <span className="badge-info btn-lg">Admin</span>
+                            <br />
+                          </div>
                           : <div hidden></div>
                         }
                       </div>

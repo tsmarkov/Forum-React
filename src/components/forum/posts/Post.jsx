@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import observer from '../../../infrastructure/observer';
-import { isAuthenticated, getCurrentUserId } from './../../../api/auth';
+import { isAuthenticated, getCurrentUserId, isAdmin } from './../../../api/auth';
 import { deletePost, editPost, getPostsByThreadIdAndPostId } from './../../../api/threads';
 
 class Post extends Component {
@@ -136,7 +136,7 @@ class Post extends Component {
           </div>
           <hr />
           <div className="row">
-            {this.props.thread.uid === this.state.uid ?
+            {(this.props.thread.uid === this.state.uid) || sessionStorage.getItem('admin') ?
               <div className="col-md-6">
                 {this.props.thread.pid ?
                   <div>

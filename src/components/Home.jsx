@@ -62,19 +62,19 @@ class Home extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a className="btn btn-secondary" href="/" role="button">View details »</a></p>
+              <h2>Quis autem vel eum iure reprehenderit </h2>
+              <p>Ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+              <p><Link className="btn btn-secondary" to="/thread/1535615620028" role="button">View details »</Link></p>
             </div>
             <div className="col-md-4">
-              <h2>Heading</h2>
+              <h2>At vero eos et accusamus et iusto odio dignissimos.</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a className="btn btn-secondary" href="/" role="button">View details »</a></p>
+              <p><Link className="btn btn-secondary" to="/thread/1535615620028" role="button">View details »</Link></p>
             </div>
             <div className="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a className="btn btn-secondary" href="/" role="button">View details »</a></p>
+              <h2> First Thread</h2>
+              <p> Om, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru </p>
+              <p><Link className="btn btn-secondary" to="/thread/1535610336290" role="button">View details »</Link></p>
             </div>
           </div>
         </div>

@@ -12,7 +12,8 @@ class SignUp extends Component {
     this.state = {
       email: null,
       password: null,
-      redirect: false
+      redirect: false,
+      error: false
     }
   }
 
@@ -42,9 +43,17 @@ class SignUp extends Component {
     let password = event.target.password.value;
     let passwordConfirm = event.target.password_confirm.value;
 
+
     if (password !== passwordConfirm) {
-      console.error('Passwords must match');
-      return;
+      this.setState({
+        error: 'Passwords must match'
+      })
+
+      setTimeout(() => {
+        this.setState({
+          error: false
+        })
+      }, 5000)
     }
 
     auth.register(email, password, displayName, DEFAULT_PROFILE_PIC)
@@ -73,6 +82,13 @@ class SignUp extends Component {
         {this.state.redirect ?
           <Redirect to="/" /> :
           <div className="row">
+          <br/>
+            {this.state.error !== false ?
+              <div className="p-5 text-red text-center">
+                <h1 style="color: red">{this.state.error}</h1>
+              </div>
+              : <div></div>
+            }
             <div className="col-md-4"></div>
             <div className="col-md-4">
               <div className="login-panel panel panel-default">

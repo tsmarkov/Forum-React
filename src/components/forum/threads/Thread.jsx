@@ -16,8 +16,10 @@ import {
   getCurrentUserId,
   getCurrentUserDisplayName,
   isAuthenticated,
-  getUserById
+  getUserById,
+  isAdmin
 } from '../../../api/auth'
+
 
 class Thread extends Component {
 
@@ -145,7 +147,7 @@ class Thread extends Component {
                     <hr />
                   </div>
                   <div className="col-md-2">
-                    {this.state.thread.uid === getCurrentUserId() ?
+                    {this.state.thread.uid === getCurrentUserId() || sessionStorage.getItem('admin')  ?
                       <a className="btn btn-md btn-outline-danger"
                         href="javascript:void(0)"
                         onClick={this.deleteThread}>❌
@@ -153,6 +155,8 @@ class Thread extends Component {
                       </a> : <div></div>
                     }
                   </div>
+                </div>
+                <div>
                 </div>
                 <div className="container bg-seccondary rounded-top p-1">
                   <Post thread={this.state.thread}></Post>
