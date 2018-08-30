@@ -42,7 +42,7 @@ For backend are used **Firebase Realtime Database**.
     ◦ npm install -E
     
 ##### • Setting up Firebase
-    ◦ Create file "constants.js" in "./src/config"
+    ◦ Find file "constants.js" in "./src/config" and replace with your credentials
     ◦ Add new project in https://console.firebase.google.com/
     
 #### • Copy your automaticly generated "Web Setup" configs and place it in "constants.js" coresponding properties
